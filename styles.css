@@ -1,0 +1,13 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #141414;
+    color: #e5e5e5;
+    overflow-x:hidden; /*evita barra de roalgem*/
+}
+a {
+    color:#e5e5e5;
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+}
