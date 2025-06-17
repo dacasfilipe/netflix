@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Filmes</title>
+</head>
+<body>
+    <h2>Cadastro de Filmes</h2>
+    <form id="formFilme" >
+        <label for="titulo">Título:</label>
+        <input type="text" id="titulo" name="titulo" required>
+        <br>
+        <label for="ano">Ano:</label>
+        <input type="text" id="ano" name="ano" required>
+        <br>
+        <label for="genero">Genero:</label>
+        <select name="genero" id="genero">
+            <option value="">Selecione...</option>
+            <option value="Ação">Ação</option>
+            <option value="Aventura">Aventura</option>
+            <option value="Comédia">Comédia</option>
+            <option value="Drama">Drama</option>
+            <option value="Fantasia">Fantasia</option>
+            <option value="Ficção">Ficção Científica</option>
+        </select>
+        <button type="submit">Cadastrar Filme</button>
+    </form>
+    <!--Aqui mostraremos a lista de filmes cadastrados-->
+    <h3>Filmes Cadastrados</h3>
+    <ul id="listaFilmes">
+        
+    </ul>
+    <script src="formCadastroFilmes.js"></script>
+</body>
+</html>
