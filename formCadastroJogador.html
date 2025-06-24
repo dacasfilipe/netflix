@@ -3,35 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de Jogador da Seleção</title>
+    <title>SNIOS - Formulário Nike</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Helvetica+Neue:wght@400;500;700&display=swap');
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+        }
+    </style>
 </head>
-<body>
-    <h1>Cadastro de Jogador</h1>
-    <form id="formJogador">
-        <label for="nome">Nome do Jogador:</label>
-        <input type="text" id="nome" name="nome" required><br>
-        <label>Habilidades:</label><br>
-        <label><input type="checkbox" name="habilidades" value="Passe">Passe</label><br>
-        <label><input type="checkbox" name="habilidades" value="Drible">Drible</label><br>
-        <label><input type="checkbox" name="habilidades" value="Chute">Chute</label><br>
-        <label><input type="checkbox" name="habilidades" value="Defesa">Defesa</label><br>
-        <label><input type="checkbox" name="habilidades" value="Velocidade">Velocidade</label><br><br>
-        
-        <label>Posição:</label><br>
-        <label><input type="radio" name="posicao" value="CentroAvante"> CentroAvante</label><br>
-        <label><input type="radio" name="posicao" value="MeioCampo"> MeioCampo</label><br>
-        <label><input type="radio" name="posicao" value="Goleiro"> Goleiro</label><br>
-        <label><input type="radio" name="posicao" value="Zagueiro"> Zagueiro</label><br>
-        <label><input type="radio" name="posicao" value="Lateral"> Lateral</label><br>
-        <br>
-        <label for="estreia">Data de estreia na Seleção:</label>
-        <input type="date" id="estreia" name="estreia" required><br><br>
-        <button type="submit">Cadastrar Jogador</button>
-    </form><br><br>
-    <h2>Jogadores Cadastrados</h2>
-    <ul id="listaJogadores">
-        <!-- Lista de jogadores será preenchida aqui -->
-    </ul>
-    <script src="formCadastroJogador.js"></script>
+<body class="bg-gray-100">
+    <!-- Header -->
+    <header class="bg-white shadow-sm">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <h1 class="text-2xl font-bold text-black">BRasileiro</h1>
+                <nav class="hidden md:block">
+                    <ul class="flex space-x-6">
+                        <li><a href="#" class="text-black hover:text-gray-600 font-medium">Lançamentos</a></li>
+                        <li><a href="#" class="text-black hover:text-gray-600 font-medium">Masculino</a></li>
+                        <li><a href="#" class="text-black hover:text-gray-600 font-medium">Feminino</a></li>
+                        <li><a href="#" class="text-black hover:text-gray-600 font-medium">Infantil</a></li>
+                        <li><a href="#" class="text-black hover:text-gray-600 font-medium">SNKRS</a></li>
+                    </ul>
+                </nav>
+                <div class="relative">
+                    <input type="text" placeholder="Buscar" class="pl-8 pr-4 py-1 border border-gray-300 rounded-full text-sm focus:outline-none focus:ring-1 focus:ring-gray-400">
+                    <svg class="w-4 h-4 absolute left-2.5 top-2 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </header>
+
+   
+   
+    <!-- Formulário -->
+    <div class="container mx-auto px-4 py-12 max-w-md">
+        <div class="bg-white shadow-md rounded-lg overflow-hidden">
+            <div class="p-8">
+                <h3 class="text-2xl font-bold text-black mb-6">Cadastre-se</h3>
+                
+                <form class="space-y-6">
+                    <div>
+                        <label for="nome" class="block text-sm font-medium text-gray-700 mb-1">Nome Completo</label>
+                        <input type="text" id="nome" name="nome" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-black focus:border-black">
+                    </div>
+                    
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                        <input type="email" id="email" name="email" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-black focus:border-black">
+                    </div>
+                    
+                    <div>
+                        <label for="senha" class="block text-sm font-medium text-gray-700 mb-1">Senha</label>
+                        <input type="password" id="senha" name="senha" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-black focus:border-black">
+                    </div>
+                    
+                    <div class="flex items-center">
+                        <input type="checkbox" id="newsletter" name="newsletter" class="h-4 w-4 text-black focus:ring-black border-gray-300 rounded">
+                        <label for="newsletter" class="ml-2 block text-sm text-gray-700">Desejo receber ofertas exclusivas por email</label>
+                    </div>
+                    
+                    <button type="submit" class="w-full bg-black text-white py-3 px-4 rounded-md hover:bg-gray-800 transition duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black font-medium">
+                        CADASTRAR
+                    </button>
+                    
+                    <p class="text-xs text-gray-500">Ao se cadastrar, você concorda com nossos Termos de Uso e Política de Privacidade.</p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 py-8">
+        <div class="container mx-auto px-4 text-center text-sm text-gray-600">
+            <p>© 2023 SNIOS. Todos os direitos reservados.</p>
+        </div>
+    </footer>
 </body>
 </html>
